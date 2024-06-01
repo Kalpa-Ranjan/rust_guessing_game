@@ -1,1 +1,3 @@
-# rust_guessing_game
+# Guessing Game
+*by Kalpa Behera*
+---
