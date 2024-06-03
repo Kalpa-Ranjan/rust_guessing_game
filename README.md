@@ -37,8 +37,8 @@ flowchart LR
 
     fruitslist --> randNo --> randomfruit
     
-    inputfromuser{take input
-    from user}
+    inputfromuser[/take input
+    from user/]
 
 
 
