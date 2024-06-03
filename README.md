@@ -6,7 +6,7 @@
 ---
 title: Flowchart of Guessing Fruit Game
 ---
-flowchart LR
+flowchart TB
     subgraph import[import libraries]
     direction TB
     std[Use IO module
@@ -67,9 +67,9 @@ flowchart LR
 
 
 
-    import --> select --> inputfromuser --Input Error --> errorHandling 
+    import --> select --> inputfromuser --Input Error --> errorHandling --No Error --> Checkfruit
 
-    inputfromuser -->Checkfruit
+    errorHandling --found Error --> catherrorprint[Catch Erorr and print]
 
     Checkfruit -- yes --> check --Yes --> Yesfruitavailable --Yes --> Finish
 
@@ -105,7 +105,8 @@ graph LR
     input is correct
     or not}
 
-    printinput[Print the input]
+    printinput[Print the input
+     and Proceed further]
 
     catcherror[Catch Error
     and print]
