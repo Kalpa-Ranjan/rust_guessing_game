@@ -119,13 +119,13 @@ graph LR
 ```
 
 
-> Use IO modules from std library.
+<mark> Use IO modules from std library.</mark>
 
 `use std::io;`
 
 *To take input from users*
 
-> Import all random functions, methods from rand library.
+<mark>Import all random functions, methods from rand library.</mark>
 
 `use rand::prelude::*;`
 
