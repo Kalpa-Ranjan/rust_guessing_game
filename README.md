@@ -56,12 +56,13 @@ flowchart LR
      is not 
      in the list]
 
-    Yesfruitavailable[print 
-    you are a winner]
+    Yesfruitavailable[WooW!
+    you won $100,000]
 
     Finish[Finish]
 
-    tryagain{Do you want 
+    tryagain{Bad Luck !
+    Do you want 
     to try again}
 
 
@@ -70,7 +71,7 @@ flowchart LR
 
     inputfromuser -->Checkfruit
 
-    Checkfruit -- yes --> check --> Yesfruitavailable --Yes --> Finish
+    Checkfruit -- yes --> check --Yes --> Yesfruitavailable --Yes --> Finish
 
     check -- No --> tryagain
     Checkfruit -- No --> Nofruitavailable --> tryagain
