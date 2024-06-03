@@ -67,7 +67,7 @@ flowchart LR
 
 
 
-    import --> select --> inputfromuser --Input Error --> errorHandling --No Error --> Checkfruit
+    import --> select --> inputfromuser --> errorHandling --No Error --> Checkfruit
 
     errorHandling --found Error --> catherrorprint[Catch Erorr and print]
 
