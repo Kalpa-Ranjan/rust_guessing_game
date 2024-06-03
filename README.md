@@ -119,30 +119,35 @@ graph LR
 ```
 
 
-> To take input from users.
+> Use IO modules from std library.
 
 `use std::io;`
 
-*Use **io** modules from **std** library.*
+*To take input from users*
 
-> We want to generate Random number.
+> Import all random functions, methods from rand library.
 
 `use rand::prelude::*;`
 
-*From **rand** library we will take **prelude** item.
-From **prelude** item take all methods.*
+*From **rand** library we will take **prelude** item.*
 
-> Let's take a list of fruits.
+*From **prelude** item take all methods.*
+
+*We want to generate Random number*
+
+> Make list of fruit.
 
 `let guess_list = ["grapes","banana","oranges"];`
 
-> Create a random number.
+> Generate random number.
 
 `let mut rng = thread_rng();`
 
 ***thread_rng()** is a method to generate random number.*
 
-> Create a random number in a range.
+> get fruit name from list of fruits based on random number.
+
+1. Create a random number in a range.
 
 `let index = rng.gen_rang(0..guess_list.length());`
 
@@ -150,19 +155,19 @@ From **prelude** item take all methods.*
 
 *Here 0 is included but length of guess_list excluded.*
 
-> Find random fruit
+2. Find random fruit
 
 `let random_fruit = guess_list[index];`
 
 *Random fruit will be selected from guess_list based upon random number generated and saved in index*
 
-> Take input from user, compare with random_fruit.
+> take input from user.
 
 `let mut input = String::new()`
 
-*Input type String*
+ *Input type String*
 
-> Check input type whether it's correct input or not(Error Handling).
+> Error Handling.
 
 `match io::stdin().read_line(&mut input){}`
 ***match** is useed to check user input*
@@ -171,12 +176,16 @@ From **prelude** item take all methods.*
 
 ***ok(_)** Here "_" used to return input type(Correct/ not Correct).*
 
-> Catch user input Error.
+> Catch Error and print.
+
 `Err(error)=>{}`
 
 ***Err** will catch the **error***
 
-> Preprocess input data.
+> Preprocess input Data.
+1. Trim the extra space of input string.
+2. Convert the input string to lower case.
+
 `let fruit_selected = input.trim().to_lowercase();`
 
 ***input.trim()** is used to trim extra spaces.*
@@ -202,6 +211,7 @@ From **prelude** item take all methods.*
 ***->bool** will return boolean.*
 
 `return fruit_selected == random_fruit`
+
 *It will return true or false based on comparison*
 
 
