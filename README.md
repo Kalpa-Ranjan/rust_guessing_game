@@ -1,5 +1,6 @@
 # Guessing Game
-*by Kalpa Behera*
+#### *by Kalpa Behera*
+#### Programming Language: Rust
 ---
 
 ```mermaid
