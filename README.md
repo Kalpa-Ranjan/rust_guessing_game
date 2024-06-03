@@ -6,7 +6,7 @@
 ---
 title: Flowchart of Guessing Fruit Game
 ---
-flowchart TB
+flowchart LR
     subgraph import[import libraries]
     direction TB
     std[Use IO module
