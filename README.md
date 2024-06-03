@@ -7,7 +7,7 @@
 title: Flowchart of Guessing Fruit Game
 ---
 flowchart LR
-    subgraph import[import libraries]
+    subgraph import[Import libraries]
     direction TB
     std[Use IO module
     from std library]
@@ -27,7 +27,7 @@ flowchart LR
     randNo[Generate
     random number]
 
-    randomfruit[get fruit
+    randomfruit[Get fruit
     name from 
     list of fruits 
     based on
@@ -145,7 +145,7 @@ graph LR
 
 ***thread_rng()** is a method to generate random number.*
 
-## get fruit name from list of fruits based on random number.
+## Get fruit name from list of fruits based on random number.
 
 1. Create a random number in a range.
 
@@ -182,7 +182,7 @@ graph LR
 
 ***Err** will catch the **error***
 
-> Preprocess input Data.
+## Preprocess input Data.
 1. Trim the extra space of input string.
 2. Convert the input string to lower case.
 
