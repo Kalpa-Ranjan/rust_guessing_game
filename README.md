@@ -154,7 +154,7 @@ From **prelude** item take all methods.*
 
 `let random_fruit = guess_list[index];`
 
-*Random fruit will be selected from guess_list based upon random number saved in index*
+*Random fruit will be selected from guess_list based upon random number generated and saved in index*
 
 > Take input from user, compare with random_fruit.
 
@@ -164,30 +164,45 @@ From **prelude** item take all methods.*
 
 > Check input type whether it's correct input or not(Error Handling).
 
-```Rust
-match io::stdin().read_line(&mut input){
-    ok(_)=>{
-        let fruit_selected = input.trim().to_lowercase();
-        println!("Fruit Selected",fruit_selected)
-    }
-    Err(error)=>{
-        println("Error is {}",error);
-    }
-}
-```
-***ok(_)** Here "_" used to take all input type.*
+`match io::stdin().read_line(&mut input){}`
+***match** is useed to check user input*
+***read_line** is a method of **stdin()**, it returns result types.*
+`ok(_)=>{}`
+
+***ok(_)** Here "_" used to return input type(Correct/ not Correct).*
+
+> Catch user input Error.
+`Err(error)=>{}`
+
+***Err** will catch the **error***
+
+> Preprocess input data.
+`let fruit_selected = input.trim().to_lowercase();`
 
 ***input.trim()** is used to trim extra spaces.*
 
 ***input.to_lowercase()** is used to convert each letter to lower case.*
 
-```Rust
-    Err(error)=>{
-        println!("Error is {}",error);
-    }
-```
+> Check fruit is available or not in the list.
 
-***Err** will catch the error & **println!** will print the error*
+`if !guess_list.contains(&fruit_selected.as_str)`
+
+***as_str** converts string to **&str**.*
+
+> Compare user input fruit with Random fruit.
+
+`if guess_checker(&fruit_selected, random_fruit){}`
+
+*It will compare the values between fruit_selected and random_fruit.*
+
+`fn guess_checker(fruit_selected:&str, random_fruit:&str)->bool{}`
+
+*It Creates a function guess_checker, which takes input fruit_selected and random_fruit of type **&str**.*
+
+***->bool** will return boolean.*
+
+`return fruit_selected == random_fruit`
+*It will return true or false based on comparison*
 
 
 
