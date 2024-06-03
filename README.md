@@ -119,13 +119,13 @@ graph LR
 ```
 
 
-==Use IO modules from std library.==
+## Use IO modules from std library.
 
 `use std::io;`
 
 *To take input from users*
 
-<mark>Import all random functions, methods from rand library.</mark>
+## Import all random functions, methods from rand library.
 
 `use rand::prelude::*;`
 
@@ -135,17 +135,17 @@ graph LR
 
 *We want to generate Random number*
 
-> Make list of fruit.
+## Make list of fruit.
 
 `let guess_list = ["grapes","banana","oranges"];`
 
-> Generate random number.
+## Generate random number.
 
 `let mut rng = thread_rng();`
 
 ***thread_rng()** is a method to generate random number.*
 
-> get fruit name from list of fruits based on random number.
+## get fruit name from list of fruits based on random number.
 
 1. Create a random number in a range.
 
@@ -161,13 +161,13 @@ graph LR
 
 *Random fruit will be selected from guess_list based upon random number generated and saved in index*
 
-> take input from user.
+## Take input from user.
 
 `let mut input = String::new()`
 
  *Input type String*
 
-> Error Handling.
+## Error Handling.
 
 `match io::stdin().read_line(&mut input){}`
 ***match** is useed to check user input*
@@ -176,7 +176,7 @@ graph LR
 
 ***ok(_)** Here "_" used to return input type(Correct/ not Correct).*
 
-> Catch Error and print.
+## Catch Error and print.
 
 `Err(error)=>{}`
 
@@ -192,7 +192,7 @@ graph LR
 
 ***input.to_lowercase()** is used to convert each letter to lower case.*
 
-> Check fruit is available or not in the list.
+## Check fruit is available or not in the list.
 
 `if !guess_list.contains(&fruit_selected.as_str)`
 
